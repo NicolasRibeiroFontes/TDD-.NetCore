@@ -20,5 +20,14 @@ namespace Tests
             user.LastName = ".Net Core";
             Assert.AreEqual(user.ConcatenateName(), "TDD .Net Core");
         }
+
+        [Test]
+        public void ValidEmail()
+        {
+            user.Email = "nicolas.rfontesgmail";
+            Assert.False(user.ValidEmail());
+            user.Email = "nicolas.rfontes@gmail.com";
+            Assert.True(user.ValidEmail());
+        }
     }
 }

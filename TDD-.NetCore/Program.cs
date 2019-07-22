@@ -10,9 +10,11 @@ namespace TDD_.NetCore
             User _user = new User
             {
                 FirstName = "Nicolas",
-                LastName = "Fontes"
+                LastName = "Fontes",
+                Email = "nicolas.rfontes@gmail.com"
             };
-            Console.WriteLine(_user.ConcatenateName());
+            Console.WriteLine("Concatenate: "+_user.ConcatenateName());
+            Console.WriteLine("Email Valid: " + (_user.ValidEmail() ? _user.Email : "Email invalid!"));
 
             Console.WriteLine("---------");
             Console.WriteLine("Finish!");
