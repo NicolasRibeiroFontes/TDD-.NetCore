@@ -1,12 +1,21 @@
-﻿using System;
+﻿using App.Services;
+using System;
 
 namespace TDD_.NetCore
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            User _user = new User
+            {
+                FirstName = "Nicolas",
+                LastName = "Fontes"
+            };
+            Console.WriteLine(_user.ConcatenateName());
+
+            Console.WriteLine("---------");
+            Console.WriteLine("Finish!");
             Console.ReadKey();
         }
     }

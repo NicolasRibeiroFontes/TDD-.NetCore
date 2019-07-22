@@ -6,4 +6,8 @@
     <RootNamespace>TDD_.NetCore</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\App.Services\App.Services.csproj" />
+  </ItemGroup>
+
 </Project>
