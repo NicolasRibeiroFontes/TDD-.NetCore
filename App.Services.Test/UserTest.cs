@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace Tests
 {
-    public class CalculatorTest
+    public class UserTest
     {
         private User user;
 
