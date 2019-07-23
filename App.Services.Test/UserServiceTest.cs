@@ -20,7 +20,10 @@ namespace App.Services.Test
             user.Email = "nicolas.rfontes@gmail.com";
             user.FirstName = "Nicolas";
             user.LastName = "Fontes";
-            Assert.NotNull(_userService.InsertUser(user));
+            Assert.IsNotNull(_userService.InsertUser(user));
+
+            user.Email = "nicolas.rfontesgmail.com";
+            Assert.IsNull(_userService.InsertUser(user));
         }
     }
 }

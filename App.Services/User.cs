@@ -8,6 +8,7 @@ namespace App.Services
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
+        public DateTime BirthDate { get; set; }
 
         public string ConcatenateName()
         {
@@ -17,6 +18,11 @@ namespace App.Services
         public bool ValidEmail()
         {
             return Email.Contains("@") && Email.Contains(".com");
+        }
+
+        public int GetDaysOfLife()
+        {
+            return (DateTime.Now - BirthDate).Days;
         }
     }
 }
